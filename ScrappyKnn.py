@@ -1,5 +1,6 @@
 import random
 from scipy.spatial import distance 
+from sklearn.metrics import accuracy_score
 
 def euc(a, b):
     return distance.euclidean(a, b)
@@ -66,5 +67,4 @@ classifier = ScrappyKNN()
 
 classifier.fit(X_train, y_train)
 predictions = classifier.predict(X_test)
-from sklearn.metrics import accuracy_score
 print(accuracy_score(y_test, predictions))
